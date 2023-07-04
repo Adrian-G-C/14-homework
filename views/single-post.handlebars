@@ -1,0 +1,31 @@
+<article class="single-post-wrapper">
+    <article class="post">
+        <div class="title-wrapper">
+            <h2 class="title">{{post.title}}</h2>
+            <p>Posted by {{user.username}} on {{format_date post.createdAt}}</p>
+        </div>
+        <div class="post-text">
+            {{post.text}}
+        </div>
+    </article>
+
+    <div class="comments-wrapper">
+        <h2>Comments</h2>
+        {{> comments post.comments}}
+    </div>
+
+    {{#if loggedIn}}
+    <form class="comment-form">
+        <div>
+            <textarea name="comment-body"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Add Comment</button>
+        </div>
+    </form>
+    {{/if}}
+</article>
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}

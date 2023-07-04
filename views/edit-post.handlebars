@@ -1,0 +1,19 @@
+<div class="back-btn-wrapper">
+    <a href="/dashboard" class="back-btn"> &larr; Back to dashboard</a>
+</div>
+<section class="edit-post">
+    <h2>Edit post</h2>
+    <form class="edit-post-form">
+        <div>
+            <p>Title:</p>
+            <input name="post-title" id="post-title" type="text" value="{{post.title}}" />
+            <p>Text: </p>
+            <textarea name="post-text" id="post-text">{{post.text}}</textarea>
+        </div>
+        <div class="button-wrapper">
+            <button type="submit" class="save-post-btn">Save post</button>
+            <button type="button" class="delete-post-btn">Delete post</button>
+        </div>
+    </form>
+</section>
+<script src="/js/edit-post.js"></script>
